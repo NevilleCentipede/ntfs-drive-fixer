@@ -23,7 +23,7 @@ proc main =
     if ifTextInput:
       discard textInputBox(Rectangle(x: 150, y: 100, width: 500, height: 200), "", "Fixer", "this does nothing", textInput)
     if button(Rectangle(x: 150, y: 50, width:500, height:50), "FIX"):
-      let pkexecLaunch = execProcess("pkexec", args=["/usr/bin/ntfsfix","-d", textInput], options={poUsePath, poStdErrToStdOut})
+      let pkexecLaunch = startProcess("pkexec", args=["/usr/bin/ntfsfix","-d", textInput], options={poUsePath, poStdErrToStdOut})
     endDrawing()
   closeWindow() # Close window and OpenGL context
 main()
