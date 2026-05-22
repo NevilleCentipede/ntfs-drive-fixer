@@ -6,3 +6,5 @@ raygui, raylib, nim compiler
 1. do "nimble install https://github.com/planetis-m/naygui.git"
 2. just run nim c main.nim
 <img width="800" height="474" alt="image" src="https://github.com/user-attachments/assets/8cb17ef1-4114-49e3-abf3-084a65681dcc" />
+old screenshot
+what it really does : it is extremely simple. It runs pkexec /usr/bin/ntfsfix -d [YOUR INPUT]
