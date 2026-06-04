@@ -1,6 +1,7 @@
 import raylib
 import osproc
 import raygui
+var textInput* = newString(32)
 proc drawProc*()=
   var 
     getFpsA = $getFPS()
@@ -13,7 +14,8 @@ proc drawProc*()=
     textBoxWidth = getCurrentScreenWidthFloat * 0.2f
     textBoxHeight = getCurrentScreenHeightFloat * 0.2f
     ifTextInput: bool = true
-    textInput = newString(32)
+    
+  let UselessString = ""
   drawText(getFpsA, 1, 1, 50, BLACK)
   if ifTextInput:
     discard textInputBox(Rectangle(
@@ -22,6 +24,8 @@ proc drawProc*()=
       width: textBoxWidth, 
       height: textBoxHeight),
   "", "Fixer", "this does nothing", textInput)
+  #[if textBox(Rectangle(x: 200, y: 200, width: 400, height: 50), textInput, true):
+    echo("a")]#
   if button(Rectangle(
   x: (getCurrentScreenWidthFloat-buttonWidth)/2,
   y: ((getCurrentScreenHeightFloat-buttonHeight)/4), 
